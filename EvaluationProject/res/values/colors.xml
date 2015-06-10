@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#d9d9d9</color>
+    <color name="backgroundDark">#000000</color>
+    <color name="black_color">#000000</color>
+    <color name="setup_gray">#D1D1D1</color>
+    <color name="card_action_side_bar">#2c6e7c</color>
+    <color name="card_action_separator">#c8c8c8</color>
+    <color name="dark_gray">#cccccc</color>
+    <color name="dark_gray_text">#4c4c4c</color>
+    <color name="settings_title_text">#2c6e7c</color>
+    <color name="card_desc_background">#d3d3d3</color>
+
+</resources>

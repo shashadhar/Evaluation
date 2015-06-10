@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/setup_gray" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/setup_gray"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/store_top_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/setup_gray"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/company_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="24dip"
+                            android:layout_marginTop="5dip"
+                            android:text="@string/_store"
+                            android:textColor="@color/settings_title_text"
+                            android:textSize="18dip"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Details -->
+
+                    <RelativeLayout
+                        android:id="@+id/store_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
+
+                                    <View
+                                        android:layout_width="6dip"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/card_action_side_bar" />
+
+                                    <TextView
+                                        android:id="@+id/company_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/prepaid_tab_stretch"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="16dip"
+                                        android:text="Details"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#ffffff"
+                                    android:orientation="vertical" >
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/store__left_stripe"
+                                        android:orientation="vertical"
+                                        android:paddingBottom="16dip" >
+
+                                        <HorizontalScrollView
+                                            android:id="@+id/store_horizontal_scroll_view"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:scrollbars="none" >
+
+                                            <LinearLayout
+                                                android:id="@+id/store_item_layout"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal" >
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="10dp"
+                                                    android:orientation="vertical" >
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                                                                                    android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="MaxArea:"
+                                                            android:textColor="#000000"
+                                                          
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/details_maxArea"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Address"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="MaxPrice:"
+                                                            android:textColor="#000000"
+                                                          
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/details_maxPrice"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="City"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                           
+                                                            android:layout_width="fill_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="MaxPricePerSqft:"
+                                                            android:textColor="#000000"
+                                                           
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/details_maxPricePerSqft"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="locality"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="MinArea:"
+                                                            android:textColor="#000000"
+                                                         
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/details_minArea"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Min Area"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                                    <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="10dp"
+                                                    android:orientation="vertical" >
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                                                                                      android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="MinPrice"
+                                                            android:textColor="#000000"
+                                                          
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/details_minPrice"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Address"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="MinPricePerSqft"
+                                                            android:textColor="#000000"
+                                                          
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/details_minPricePerSqft"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="City"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="fill_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="ProjectType:"
+                                                            android:textColor="#000000"
+                                                           
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/details_projectType"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="locality"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+                                            
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </HorizontalScrollView>
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <!-- Summary -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
+
+                                    <View
+                                        android:layout_width="6dip"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/card_action_side_bar" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/prepaid_tab_stretch"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="16dip"
+                                        android:text="Summary"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#ffffff"
+                                    android:orientation="vertical" >
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/store__left_stripe"
+                                        android:orientation="vertical"
+                                        android:paddingBottom="16dip" >
+
+                                        <HorizontalScrollView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:scrollbars="none" >
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal" >
+                                                    
+                                                 <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="10dp"
+                                                    android:orientation="vertical" >
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="Area:"
+                                                            android:textColor="#000000"
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/summary_Area"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Address"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="Bathrooms:"
+                                                            android:textColor="#000000"
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/summary_bathroom"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="null"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="fill_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="Bedroom"
+                                                            android:textColor="#000000"
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/summary_bedroom"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="null"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="CarParking:"
+                                                            android:textColor="#000000"
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/summary_carParking"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="null"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="10dp"
+                                                    android:orientation="vertical" >
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="LandArea"
+                                                            android:textColor="#000000"
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/summary_landArea"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Null"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="Price"
+                                                            android:textColor="#000000"
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/summary_price"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="City"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="2dp"
+                                                        android:orientation="horizontal" >
+
+                                                        <TextView
+                                                            android:layout_width="fill_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginRight="10dp"
+                                                            android:text="ProjectType:"
+                                                            android:textColor="#000000"
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:id="@+id/summary_projectType"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="null"
+                                                            android:textColor="@color/black_color" />
+                                                    </LinearLayout>
+                                                </LinearLayout>
+                                                
+                                                
+                                                
+                                                
+                                            </LinearLayout>
+                                        </HorizontalScrollView>
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <!-- Ameneties-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
+
+                                    <View
+                                        android:layout_width="6dip"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/card_action_side_bar" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/prepaid_tab_stretch"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="16dip"
+                                        android:text="Amenities"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#ffffff"
+                                    android:orientation="vertical" >
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/store__left_stripe"
+                                        android:orientation="vertical"
+                                        android:paddingBottom="16dip" >
+
+                                        <HorizontalScrollView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:scrollbars="none" >
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal" >
+                                                  <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="2dp"
+                                                    android:orientation="vertical" >
+
+                                                    <CheckBox
+                                                        android:id="@+id/amenities_1st"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="#000000"
+                                                        android:visibility="gone"
+                                                        android:text="Security" />
+
+                                                    <CheckBox
+                                                        android:id="@+id/amenities_2nd"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="#000000"
+                                                        android:visibility="gone"
+                                                        android:text="Lift" />
+                                                    
+                                                    <CheckBox
+                                                         android:id="@+id/amenities_3rd"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="#000000"
+                                                          android:visibility="gone"
+                                                        android:text="Power BackUp" />
+                                                     
+                                                    <CheckBox
+                                                         android:id="@+id/amenities_4th"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="#000000"
+                                                          android:visibility="gone"
+                                                        android:text="Power BackUp" />
+                                                   
+                                                </LinearLayout>
+                                                 <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="2dp"
+                                                    android:orientation="vertical" >
+                                              <CheckBox
+                                                         android:id="@+id/amenities_5th"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="#000000"
+                                                          android:visibility="gone"
+                                                        android:text="Security" />
+                                                    <CheckBox
+                                                         android:id="@+id/amenities_6th"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="#000000"
+                                                          android:visibility="gone"
+                                                        android:text="Gym" />
+                                                      <CheckBox
+                                                         android:id="@+id/amenities_7th"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="#000000"
+                                                          android:visibility="gone"
+                                                        android:text="Gym" />
+                                                       <CheckBox
+                                                         android:id="@+id/amenities_8th"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:textColor="#000000"
+                                                          android:visibility="gone"
+                                                        android:text="Gym" />
+                                                      </LinearLayout>
+                                                
+                                              </LinearLayout>
+                                        </HorizontalScrollView>
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/parent_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dip"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+ </RelativeLayout>
